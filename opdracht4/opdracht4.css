@@ -1,0 +1,47 @@
+#div1 {
+    background-color: red;
+}
+
+#div2 {
+    background-color: green;
+}
+
+#div3 {
+    background-color: blue;
+}
+
+#div4 {
+    background-color: yellow;
+}
+
+#div5 {
+    background-color: purple;
+}
+
+#div6 {
+    background-color: orange;
+}
+
+#div7 {
+    background-color: pink;
+}
+
+#div8 {
+    background-color: brown;
+}
+
+#div9 {
+    background-color: cyan;
+}
+
+#div10 {
+    background-color: magenta;
+}
+
+div {
+    margin: 10px;
+    padding: 20px;
+    color: rgb(175, 175, 175);
+    text-align: center;
+    font-size: 18px;
+}
