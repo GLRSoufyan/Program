@@ -16,8 +16,8 @@
         ctx.fillStyle = 'rgb(0, 255, 0)';
         
         for (let i = 1; i <= 10; i++) {
-            const radius = i * 20;
-            const x = 50 + (i - 1) * 190;
+            const radius = 10 * i;
+            const x = 50 + radius * 1.1 * i;
             const y = 250;
             ctx.beginPath();
             ctx.arc(x, y, radius, 0, Math.PI * 2);
