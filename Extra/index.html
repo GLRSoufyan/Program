@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitlijst</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #cfe1cb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #00b312;
+      color: white;
+      margin: 0;
+    }
+    .fruit-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .fruit {
+      background-color: white;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .fruit:hover {
+      transform: scale(1.05);
+    }
+    .fruit img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .fruit h3 {
+      margin: 10px 0;
+      color: #087b00;
+    }
+    .fruit p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Onze Fruitlijst</h1>
+
+  <div class="fruit-list" id="fruit-list"></div>
+
+  <script>
+    const fruits = [
+      {
+        name: "Appel",
+        description: "Een zoete en krokante vrucht die vaak rood, groen of geel is.",
+        image: "/Extra/Images/Appel.png"
+      },
+      {
+        name: "Banaan",
+        description: "Een lange, gele vrucht die zacht en zoet is.",
+        image: "/Extra/Images/Banaan.png"
+      },
+      {
+        name: "Sinaasappel",
+        description: "Een citrusvrucht die bekend staat om zijn verfrissende smaak en vitamine C-gehalte.",
+        image: "/Extra/Images/Sinaasappel.png"
+      },
+      {
+        name: "Aardbei",
+        description: "Een kleine, rode vrucht met kleine zaadjes op het oppervlak, zoet en sappig.",
+        image: "/Extra/Images/Aardbei.png"
+      },
+      {
+        name: "Druiven",
+        description: "Kleine, ronde vruchten die in trossen groeien en groen, rood of paars kunnen zijn.",
+        image: "/Extra/Images/Druif.png"
+      },
+      {
+        name: "Ananas",
+        description: "Een tropische vrucht met een harde schil en zoet, zuur geel vruchtvlees van binnen.",
+        image: "/Extra/Images/Ananas.png"
+      },
+      {
+        name: "Mango",
+        description: "Een zoete en sappige tropische vrucht met een grote pit in het midden.",
+        image: "/Extra/Images/Mango.png"
+      },
+      {
+        name: "Perzik",
+        description: "Een donzige vrucht met een zoete, sappige en licht zure smaak.",
+        image: "/Extra/Images/Perzik.png"
+      },
+      {
+        name: "Watermeloen",
+        description: "Een grote vrucht met een groene schil en zoet, rood vruchtvlees gevuld met zwarte zaadjes.",
+        image: "/Extra/Images/Watermeloen.png"
+      },
+      {
+        name: "Kiwi",
+        description: "Een kleine, bruine, donzige vrucht met felgroen vruchtvlees en kleine zwarte zaadjes.",
+        image: "/Extra/Images/Kiwi.png"
+      }
+    ];
+
+    const fruitListDiv = document.getElementById('fruit-list');
+    
+    fruits.forEach(fruit => {
+      const fruitDiv = document.createElement('div');
+      fruitDiv.classList.add('fruit');
+      fruitDiv.innerHTML = `
+        <h3>${fruit.name}</h3>
+        <p>${fruit.description}</p>
+        <img src="${fruit.image}" alt="${fruit.name}" />
+      `;
+      fruitListDiv.appendChild(fruitDiv);
+    });
+  </script>
+  
+</body>
+</html>
