@@ -6,6 +6,24 @@
     <title>AnimationTesting</title>
 </head>
 <body>
-    <p id="movingtext">Deze text beweegt</p>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <p>MEOW</p>
+    <p>MEOW</p>
+    <p>MEOW</p>
+    <p>MEOW</p>
+    <p>MEOW</p>
+    <p>MEOW</p>
+
+    <script>
+        gsap.to("p", {
+            duration: 1,
+            stagger: .1,
+            repeat: -1,
+            y: 20,
+            yoyo:true,
+            color: "pink",
+            ease: "elastic.in"
+        })
+    </script>
 </body>
 </html>
